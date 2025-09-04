@@ -11,18 +11,17 @@ The code is self-contained so it can live neatly inside a larger `genomics` repo
 
 ## Contents
 
-TreesAndModels/
-├─ README.md # This file
-├─ Ancestor.fa # Ancestor/reference FASTA (if required by your scripts)
-├─ Spacii.fa # FASTA set 1
-├─ Spacii_2100.fa # FASTA set 2
-├─ codingModel.tab # 64×64 probability matrix (coding model)
-├─ noncodingModel.tab # 64×64 probability matrix (neutral/noncoding model)
-├─ UPGMA.py # Part B: UPGMA implementation (Newick to stdout or file)
-├─ classifierspacii2100.py # Part A: first-order Markov classifier
-├─ codingModelClassifier.py # Part A: coding vs. neutral scoring with 64×64 matrices
-├─ ROC.py # Part A: ROC/AUC utilities/plotting
-└─ rates.py # Shared metrics helpers (TP/FP/FN/TN, accuracy, etc.)
+- README.md: This file;
+- Ancestor.fa: Ancestor/reference FASTA (if required by your scripts);
+- Spacii.fa: FASTA set 1;
+- Spacii_2100.fa: FASTA set 2;
+- codingModel.tab: 64×64 probability matrix (coding model);
+- noncodingModel.tab: 64×64 probability matrix (neutral/noncoding model);
+- classifierspacii2100.py: first-order Markov classifier (Part A);
+- codingModelClassifier.py: coding vs. neutral scoring with 64×64 matrices (Part A);
+- ROC.py: ROC/AUC utilities/plotting (Part A);
+- rates.py: Shared metrics helpers (TP/FP/FN/TN, accuracy, etc.);
+- UPGMA.py: UPGMA implementation (Part B).
 
 > **Note:** Some scripts may currently expect files to be alongside them (no CLI flags). If a path error occurs, open the script and adjust the file names/paths at the top, or add simple `argparse` flags later.
 
